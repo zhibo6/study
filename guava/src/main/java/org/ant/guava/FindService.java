@@ -1,6 +1,8 @@
 package org.ant.guava;
 
 /**
+ * 一个循环找到数组中（任意类型）的最大最小值
+ *
  * Created by zhiboliu2 on 2017/5/26.
  */
 public class FindService {
