@@ -8,10 +8,13 @@ import java.util.Date;
 public class User {
     private String name;
     private String sex;
-    private int age;
+    private Integer age;
     private Date birthday;
 
-    public User(String name, String sex, int age, Date birthday) {
+    public User(){
+
+    }
+    public User(String name, String sex, Integer age, Date birthday) {
         this.name = name;
         this.sex = sex;
         this.age = age;
@@ -34,11 +37,11 @@ public class User {
         this.sex = sex;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

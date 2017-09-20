@@ -1,5 +1,6 @@
 package org.study.demo.excel;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.FillPatternType;
@@ -36,12 +37,7 @@ public class SimpleToExcel {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            try {
-                if (fos != null)
-                    fos.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            IOUtils.closeQuietly(fos);
         }
     }
 
@@ -66,12 +62,12 @@ public class SimpleToExcel {
         //把字体应用到当前的样式
         cellStyle.setFont(font);
 
-        for (FieldConfig field : fieldList) {
-            HSSFCell cell = row.createCell(field.getColumn());
-            cell.setCellValue(field.getTitle());
+        for (FieldConfig fieldConfig : fieldList) {
+            HSSFCell cell = row.createCell(fieldConfig.getColumn());
+            cell.setCellValue(fieldConfig.getTitle());
             cell.setCellStyle(cellStyle);
-            int width = field.getWidth() != 0 ? field.getWidth() : 20;
-            sheet.setColumnWidth(field.getColumn(), width * 256);
+            int width = fieldConfig.getWidth() != 0 ? fieldConfig.getWidth() : 20;
+            sheet.setColumnWidth(fieldConfig.getColumn(), width * 256);
         }
     }
 
