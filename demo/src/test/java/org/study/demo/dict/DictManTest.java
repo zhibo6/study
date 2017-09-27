@@ -13,6 +13,7 @@ import java.util.List;
 /**
  * Created by zhiboliu2 on 2017/9/19.
  */
+
 public class DictManTest {
     @Test
     public void getDict(){
@@ -28,5 +29,19 @@ public class DictManTest {
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void test(){
+//        String[] fields = new String[]{"statId", "name", "idCard", "sex", "birthday", "idCardAddr", "idBeginDate",
+//                "idEndDate", "idFront", "idBack", "phone", "addr", "wechatCode", "bankName", "bankAccount",
+//                "plantArea", "annualIncome", "annualExpend", "houseVal", "carVal", "loanAmount", "marriageStatus",
+//                "spouseName", "spouseIdCard", "spouseSex", "spouseBirthday", "spouseIdCardAddr", "spouseIdBeginDate",
+//                "spouseIdEndDate", "spouseIdFront", "spouseIdBack", "spousePhone", "linealName", "linealType",
+//                "linealPhone", "friendName", "friendPhone", "telecomMobile", "telecomPassword", "alipayAccount"};
+//        System.out.println(fields.length);
+
+        Double data = 0.0;
+        System.out.println(data == 0);
     }
 }
